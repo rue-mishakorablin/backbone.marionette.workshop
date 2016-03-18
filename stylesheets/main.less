@@ -1,0 +1,140 @@
+body {
+    font-family: 'Lato', 'Arial', Sans;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+@modalWidth:                    640px;
+@modalBorderColor:              #ccc;
+@modalBorderWidth:              1px;
+@authFooterHeight:              65px;
+@authFooterBgColor:             #000;
+
+.modal {
+    width: @modalWidth;
+    overflow-x: hidden;
+    max-height: 70vh;
+    border: @modalBorderWidth solid @modalBorderColor;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    margin-left: -@modalWidth / 2;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ef164b;
+        color: #fff;
+        border: none;
+        min-width: 175px;
+        min-height: 40px;
+        margin: 0 auto;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    input {
+        min-height: 40px;
+        display: block;
+        font-size: 14px;
+        padding: 0 10px;
+        width: 375px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+        &.hidden {
+            display: none;
+        }
+    }
+}
+
+.authentication-dialog {
+
+    fieldset {
+        border: none;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+
+    .content {
+        margin: 30px 40px;
+    }
+
+    footer {
+        background-color: @authFooterBgColor;
+        height: @authFooterHeight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 100;
+            font-size: 16px;
+
+            em {
+                font-weight: 300;
+                font-style: normal;
+
+                &:after {
+                    content: '\25B6';
+                    color: #ef164b;
+                    padding-left: 6px;
+                }
+            }
+        }
+    }
+}
+
+#login {
+    .content {
+        header {
+            h1 {
+                font-size: 32px;
+            }
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+}
+
+#register {    
+    .conent-container {
+        position: relative;
+        height: 400px;
+    }
+    
+    .content {
+        width: @modalWidth - 80px;
+        position: absolute;
+        left: 100%;
+
+        header {
+            h1 {
+                font-size: 32px;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin: 0;
+            }
+
+            p {
+                margin: 0;
+            }
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 300;
+            font-size: 18px;
+        }
+
+        &.active {
+            left: 0;
+        }
+    }
+}

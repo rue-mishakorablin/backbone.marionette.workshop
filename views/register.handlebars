@@ -1,0 +1,33 @@
+<div id="register" class='authentication-dialog'>
+    <div class="conent-container">
+        <div class="content step1 active">
+            <header>
+                <h1>UP TO 70% OFF MUST-HAVE BRANDS</h1>
+                <p>Not a Member? Sign up to shop Rue La La.</br>Membership is free (always).</p>
+            </header>
+            <form action="/register" method="POST">
+                <fieldset>
+                    <input type="text" id="username" name="username" placeholder="Username" />
+                    <input type="text" id="password" name="password" class="hidden" value="" />
+                </fieldset>
+                <button type="submit">Continue</button>
+            </form>
+        </div>
+        <div class="content step2">
+            <header>
+                <h1>ALMOST THERE</h1>
+                <p>Just a little more info to access.</p>
+            </header>
+            <form action="/register" method="POST">
+                <fieldset>
+                    <input type="text" id="username" name="username" class='hidden' placeholder="Username" />
+                    <input type="password" id="password" name="password" placeholder="Password" />
+                </fieldset>
+                <button type="submit">Start shopping</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <a href="#register">Already a member? <em>Log in</em></a>
+    </footer>
+</div>

@@ -145,8 +145,4 @@ module.exports = function(app) {
             res.json(req.user);
         }
     );
-
-    app.get('/', function(req, res) {
-        res.status(200).json('OK');
-    });
 };
